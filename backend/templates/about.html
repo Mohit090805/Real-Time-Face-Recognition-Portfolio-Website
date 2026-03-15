@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>About - Mohit</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='about.css') }}">
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+    <div class="logo">MOHIT</div>
+    <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('work') }}">Work</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+    </div>
+</nav>
+
+<div class="about-header">Skills & Projects</div>
+
+<section class="skills-section">
+    <div class="skill-item">HTML</div>
+    <div class="skill-item">CSS</div>
+    <div class="skill-item">JavaScript</div>
+    <div class="skill-item">Python</div>
+    <div class="skill-item">Machine Learning</div>
+    <div class="skill-item">Computer Vision</div>
+    <div class="skill-item">Automation</div>
+    <div class="skill-item">Data Analysis</div>
+</section>
+
+<section class="projects-section">
+    <div class="project-card">
+    <img src="https://via.placeholder.com/300x180" alt="Project 1" />
+    <h3>Project 1</h3>
+    <a href="projects/project1.zip" download>Download</a>
+    </div>
+    <div class="project-card">
+    <img src="https://via.placeholder.com/300x180" alt="Project 2" />
+    <h3>Project 2</h3>
+    <a href="projects/project2.zip" download>Download</a>
+    </div>
+    <div class="project-card">
+    <img src="https://via.placeholder.com/300x180" alt="Project 3" />
+    <h3>Project 3</h3>
+    <a href="projects/project3.zip" download>Download</a>
+    </div>
+</section>
+
+<div class="spacer"></div>
+
+</body>
+</html>

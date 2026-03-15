@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
+<title>Navbar Preview</title>
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+    <div class="logo">MOHIT</div>
+    <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('work') }}">Work</a></li>
+        <li><a href="{{ url_for('contact') }}">Contact</a></li>
+    </ul>
+    </div>
+</nav>
+
+<section class="hero">
+    <div class="hero-image">
+    <img src="{{ url_for('static', filename='images/6.jpg') }}" alt="Profile image">
+    </div>
+
+    <div class="hero-content">
+    <h1><span id="intro-text"></span></h1>
+    <p>
+        I'm a developer and creative technologist who loves building modern,
+        animated web experiences. I focus on clean design, smooth interactions,
+        and storytelling through interfaces — keeping things recruiter-clean
+        but visually bold.
+    </p>
+    </div>
+</section>
+
+<section class="about-section">
+    <div class="about-header">What I Love Building</div>
+
+    <div class="about-grid">
+    <div class="about-card">
+        <h3>Interactive Interfaces</h3>
+        <p>
+        I design interfaces that respond, animate, and communicate — making
+        users feel something, not just click something.
+        </p>
+    </div>
+
+    <div class="about-card">
+        <h3>Creative Frontend</h3>
+        <p>
+        From smooth micro-interactions to cinematic transitions, I blend
+        design and code into a single experience.
+        </p>
+    </div>
+
+    <div class="about-card">
+        <h3>Clean Architecture</h3>
+        <p>
+        Behind the visuals, I focus on scalable, readable, and maintainable
+        code that holds up in real-world teams.
+        </p>
+    </div>
+    </div>
+</section>
+
+<section class="skills-section">
+    <div class="skills-track" id="skillsTrack"></div>
+</section>
+
+<div class="spacer"></div>
+
+<footer>
+    <h4>Mohit</h4>
+    <p style="margin-top:1rem; font-size:0.85rem; color:#555;">&copy; 2026 Mohit. All rights reserved.</p>
+</footer>
+
+<script src="{{ url_for('static', filename='home.js') }}"></script>
+
+</body>
+</html>

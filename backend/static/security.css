@@ -1,0 +1,94 @@
+/* security.css */
+
+/* Reset & basic styling */
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+
+body {
+font-family: 'Inter', system-ui, sans-serif;
+background: linear-gradient(135deg, #f8f9ff, #eef1ff);
+min-height: 100vh;
+display: flex;
+justify-content: center;
+align-items: center;
+overflow: hidden;
+}
+
+/* Security container */
+.security-container {
+text-align: center;
+background: rgba(255, 255, 255, 0.7);
+backdrop-filter: blur(15px);
+padding: 3rem 2rem;
+border-radius: 20px;
+box-shadow: 0 15px 40px rgba(0,0,0,0.08);
+max-width: 500px;
+width: 90%;
+animation: fadeIn 1s ease forwards;
+}
+
+/* Animated quotes */
+.security-quote {
+font-size: 1.2rem;
+font-weight: 500;
+margin-bottom: 2rem;
+color: #444;
+opacity: 0;
+transform: translateY(-20px);
+animation: quoteFade 2s forwards;
+animation-delay: 0.5s;
+}
+
+/* Eye button */
+.eye-button {
+display: inline-block;
+width: 80px;
+height: 80px;
+background: radial-gradient(circle, #7f7cff, #4adede);
+border-radius: 50%;
+position: relative;
+cursor: pointer;
+box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.eye-button:hover {
+transform: scale(1.1);
+box-shadow: 0 12px 28px rgba(0,0,0,0.25);
+}
+
+/* Eye pupil animation */
+.eye-button::after {
+content: '';
+position: absolute;
+top: 50%;
+left: 50%;
+width: 20px;
+height: 20px;
+background: #fff;
+border-radius: 50%;
+transform: translate(-50%, -50%);
+animation: pupilBlink 3s infinite;
+}
+
+/* Animations */
+@keyframes fadeIn {
+to {
+    opacity: 1;
+    transform: translateY(0);
+}
+}
+
+@keyframes quoteFade {
+0% { opacity: 0; transform: translateY(-20px); }
+50% { opacity: 1; transform: translateY(0); }
+100% { opacity: 1; }
+}
+
+@keyframes pupilBlink {
+0%, 20%, 100% { transform: translate(-50%, -50%) scale(1); }
+10% { transform: translate(-50%, -50%) scale(0.2); }
+}

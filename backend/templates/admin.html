@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Admin Dashboard</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+</head>
+
+<body>
+
+<section class="contact-section">
+<h1 class="contact-header">📊 Feedback Dashboard</h1>
+
+{% for fb in feedbacks %}
+<div class="contact-item" style="flex-direction: column; align-items: flex-start;">
+    <strong>{{ fb.name }}</strong>
+    <small>{{ fb.email }}</small>
+    <p style="margin-top: 0.5rem;">{{ fb.message }}</p>
+    <small style="opacity: 0.6;">{{ fb.date.strftime('%d %b %Y %H:%M') }}</small>
+</div>
+{% endfor %}
+
+{% if not feedbacks %}
+    <p>No feedback yet.</p>
+{% endif %}
+</section>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Contact - Mohit</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='contact.css') }}">
+
+</head>
+<body>
+
+<nav class="navbar">
+    <div class="nav-container">
+    <div class="logo">MOHIT</div>
+    <ul class="nav-links">
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+    </ul>
+    </div>
+</nav>
+
+<section class="contact-section">
+    <div class="contact-header">Get in Touch</div>
+
+    <div class="contact-item">
+    📞 <a href="tel:+919350313137">+91 India</a>
+    </div>
+
+    <div class="contact-item">
+    📧 <a href="mailto:mohit1011603@gmail.com">@Gmail</a>
+    </div>
+
+    <div class="contact-item">
+    📸 <a href="https://www.instagram.com/mohit" target="mohitdalal_09">@Instagram</a>
+    </div>
+
+    <div class="contact-item">
+    💼 <a href="https://www.linkedin.com/in/mohit" target="_mohit">LinkedIn Profile</a>
+    </div>
+
+</section>
+
+{% if success %}
+<div class="success-toast">
+    ✅ Feedback sent successfully!
+</div>
+{% endif %}
+
+<section class="feedback-section">
+    <h2 class="feedback-header">Send Your Feedback</h2>
+
+    <form class="feedback-form" method="POST" action="/feedback">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" rows="5" placeholder="Your Feedback..." required></textarea>
+
+        <button type="submit">Submit Feedback 🚀</button>
+    </form>
+</section>
+
+</body>
+</html>
